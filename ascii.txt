@@ -1,0 +1,26 @@
+500 - Internal Server Error
+
+Internal Server Error
+
+Internal error information:
+std.file.FileException@/home/dra/Downloads/dmd2.098.0/linux/bin64/../../src/phobos/std/file.d(2055): ./ascii.txt: No such file or directory
+----------------
+/home/dra/Downloads/dmd2.098.0/linux/bin64/../../src/phobos/std/file.d:283 @trusted bool std.file.cenforce!(bool).cenforce(bool, scope const(char)[], scope const(char)*, immutable(char)[], ulong) [0x5601b1b7fd7a]
+/home/dra/Downloads/dmd2.098.0/linux/bin64/../../src/phobos/std/file.d:272 @safe uint std.file.getAttributes!(immutable(char)[]).getAttributes(immutable(char)[]) [0x5601b1b81eef]
+/home/dra/Downloads/dmd2.098.0/linux/bin64/../../src/phobos/std/file.d:2531 @property @safe bool std.file.isFile!(immutable(char)[]).isFile(immutable(char)[]) [0x5601b1b81e3b]
+source/app.d:52 void app.home(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse) [0x5601b1b65b5e]
+/home/dra/Downloads/dmd2.098.0/linux/bin64/../../src/phobos/std/functional.d-mixin-1636:1647 void function(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse) std.functional.DelegateFaker!(void function(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse)*).DelegateFaker.doIt [0x5601b1b8a13b]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/router.d:274 @trusted void vibe.http.router.URLRouter.handlerDelegate!(void delegate(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse)).handlerDelegate(void delegate(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse)).__lambda3!(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse).__lambda3(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse) [0x5601b1b8c260]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/router.d:218 @safe bool vibe.http.router.URLRouter.handleRequest(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse).__lambda6!(ulong, immutable(char)[][]).__lambda6(ulong, scope immutable(char)[][]) [0x5601b1c4c402]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/router.d:674 const @safe bool vibe.http.router.MatchTree!(vibe.http.router.Route).MatchTree.doMatch(immutable(char)[], scope bool delegate(ulong, scope immutable(char)[][]) @safe) [0x5601b1c4eccc]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/router.d:607 @safe bool vibe.http.router.MatchTree!(vibe.http.router.Route).MatchTree.match(immutable(char)[], scope bool delegate(ulong, scope immutable(char)[][]) @safe) [0x5601b1c4e4ef]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/router.d:211 @safe void vibe.http.router.URLRouter.handleRequest(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse) [0x5601b1c4c074]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/server.d:2272 @safe bool vibe.http.server.handleRequest(vibe.internal.interfaceproxy.InterfaceProxy!(vibe.core.stream.Stream).InterfaceProxy, vibe.core.net.TCPConnection, vibe.http.server.HTTPServerContext, ref vibe.http.server.HTTPServerSettings, ref bool, scope stdx.allocator.IAllocator) [0x5601b1cffdc3]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/server.d:247 @trusted void vibe.http.server.handleHTTPConnection(vibe.core.net.TCPConnection, vibe.http.server.HTTPServerContext).__lambda11() [0x5601b1cfe01f]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/server.d:239 @safe void vibe.http.server.handleHTTPConnection(vibe.core.net.TCPConnection, vibe.http.server.HTTPServerContext) [0x5601b1cfdc30]
+../../.dub/packages/vibe-d-0.9.2/vibe-d/http/vibe/http/server.d:2028 nothrow @safe void vibe.http.server.listenHTTPPlain(vibe.http.server.HTTPServerSettings, void delegate(vibe.http.server.HTTPServerRequest, vibe.http.server.HTTPServerResponse) @safe).doListen(vibe.http.server.HTTPServerContext, bool, bool, bool, bool).__lambda7(vibe.core.net.TCPConnection) [0x5601b1c59586]
+../../.dub/packages/vibe-core-1.11.0/vibe-core/source/vibe/core/task.d:703 void vibe.core.task.TaskFuncInfo.set!(void delegate(vibe.core.net.TCPConnection) @safe, vibe.core.net.TCPConnection).set(ref void delegate(vibe.core.net.TCPConnection) @safe, ref vibe.core.net.TCPConnection).callDelegate(ref vibe.core.task.TaskFuncInfo) [0x5601b1e214ce]
+../../.dub/packages/vibe-core-1.11.0/vibe-core/source/vibe/core/task.d:724 void vibe.core.task.TaskFuncInfo.call() [0x5601b1df09b9]
+../../.dub/packages/vibe-core-1.11.0/vibe-core/source/vibe/core/task.d:433 nothrow void vibe.core.task.TaskFiber.run() [0x5601b1defc6f]
+??:? void core.thread.context.Callable.opCall() [0x5601b1ebe06c]
+??:? fiber_entryPoint [0x5601b1f2131b]
