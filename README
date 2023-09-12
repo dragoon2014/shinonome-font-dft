@@ -1,0 +1,51 @@
+# 東雲フォントdft
+
+## 概要
+
+東雲フォント(をttf変換したJFドット東雲フォント群)をDXライブラリで使用可能な
+dftフォントファイルに変換したものです。
+ライセンスはdft・txtともパブリックドメインです。
+変換スクリプトはMITライセンスです。
+
+shinonome font family
+http://openlab.ring.gr.jp/efont/shinonome/
+
+自家製ドットフォントシリーズ | 自家製フォント工房
+http://jikasei.me/font/jf-dotfont/
+
+## 内容物
+
+- JF-Dot-Shinonome12.dft
+- JF-Dot-Shinonome14.dft
+- JF-Dot-Shinonome16.dft
+- JF-Dot-ShinonomeMaru12.dft
+- JF-Dot-ShinonomeMin12.dft
+- JF-Dot-ShinonomeMin14.dft
+- JF-Dot-ShinonomeMin16.dft
+
+各東雲フォントの変換生成物です。
+
+- JF-Dot-Shinonome.chars.txt
+
+東雲フォントが持っている全文字ファイルです。
+7フォントとも同じ出力だったので束ねています。
+
+おまけとして実験用のサブセット（すべてJF Dot Shinonome Gothic 14）を含んでいます。
+
+- a{.dft|.chars.txt}
+
+文字「a」のみ。
+
+- ascii{.dft|.chars.txt}
+
+ASCIIのみ。
+
+- es1{.dft|.chars.txt}
+
+ASCII、ひらがな、小学一年生で習う漢字のみ。
+
+- genchars.sh
+
+上記の各ファイルを生成します。
+jfdotfont-20150527.7zおよびCreateDXFontData.exeを用意したうえでWSL2から実行してください。
+システムに干渉しないためWindows Sandboxを使用しているのでPro以上のWindowsが必要になります。
